@@ -5,7 +5,7 @@ Run install.sh to load all the scripts.
 
 ## Usage
 
-*****Clock:** Prints out time and date
+**Clock:** Prints out time and date
 ~~~bash
 $ clock
 23:39:18 Saturday 23 January
