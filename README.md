@@ -1,2 +1,5 @@
-# bashscripts
-All the simple scripts I mess around with
+# Bash Scripts
+A repository of all the simple bash scripts I write. 
+
+Run install.sh to load all the scripts. 
+
