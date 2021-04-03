@@ -1,0 +1,11 @@
+#!/bin/bash
+
+youtube-dl -i -x --audio-format mp3 -f bestaudio --write-thumbnail $1 -o "output.%(ext)s"
+
+ffmpeg -i ./output.webp output.png
+
+ffmpeg -i output.mp3 -i output.png -map 0 -map 1 -c copy -metadata:s:v title="Cover (front)" song.mp3
+
+rm output.*
+
+mv song.mp3 "$2.mp3"
