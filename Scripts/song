@@ -2,7 +2,13 @@
 
 youtube-dl -i -x --audio-format mp3 -f bestaudio --write-thumbnail $1 -o "output.%(ext)s"
 
-ffmpeg -i ./output.webp output.png
+if test -f *.webp; then
+    ffmpeg -i ./output.webp output.png
+fi
+
+if test -f *.jpg; then
+    ffmpeg -i ./output.jpg output.png
+fi
 
 ffmpeg -i output.mp3 -i output.png -map 0 -map 1 -c copy -metadata:s:v title="Cover (front)" song.mp3
 
